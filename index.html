@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scavenger Hunt MeetUp Vegas 2015</title>
+<!--
+    This template can be used for simple app with left side menu that can be opened to switch views, for applications like Youtube App or Gmail app.
+-->  
+    
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0;" />
+    
+    <link rel="stylesheet" type="text/css" href="appframework/build/css/af.ui.css" />
+    <link rel="stylesheet" type="text/css" href="appframework/build/css/icons.css" />
+    <script type="text/javascript" charset="utf-8" src="appframework/build/ui/appframework.ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="appframework/css/main.css"  />
+    <link rel="stylesheet" type="text/css" href="appframework/css/appframework.css"  />
+    <link rel="stylesheet" type="text/css" href="appframework/css/lists.css"  />
+    <link rel="stylesheet" type="text/css" href="appframework/css/forms.css"  />
+    <link rel="stylesheet" type="text/css" href="appframework/css/buttons.css"  />        
+    <link rel="stylesheet" type="text/css" href="appframework/css/badges.css"  />        
+    <link rel="stylesheet" type="text/css" href="appframework/css/grid.css"  />
+    <!--AppFramework plugin for sliding side menu-->
+    <script type="text/javascript" charset="utf-8" src="appframework/plugins/af.slidemenu.js"></script>
+
+    
+    <script>   
+        $.ui.autoLaunch = false;
+        $.ui.animateHeaders = false;
+                
+        $(document).ready(function(){
+            $.ui.setSideMenuWidth('200px');
+            $.ui.launch();
+        });
+    </script>
+</head>
+<body> 
+<div id="afui">
+    
+    <!--Left Side Menu Navigation bar -->
+    <nav>
+        <ul class="list">
+            <li><a href="#page1" class="icon home">Home</a></li>
+            <li><a href="#page2" class="icon calendar">Schedule</a></li>
+            <li><a href="#page3" class="icon chat">News</a></li>
+            <li><a href="#page4" class="icon camera">Photos</a></li>            
+            <li><a href="#page5" class="icon tools">About</a></li>
+        </ul>
+    </nav>
+    
+    <div id="content" style=""> 
+        
+    <!--Main View Pages-->
+        <div class="panel" title="Home" id="page1" data-footer="none" selected="true">
+            <header>
+      
+                <a id='menubadge' onclick='af.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>                 
+    
+                <h1>Scavenger Hunt / Home</h1>
+            </header>
+            <p>This is view for first menu item</p>
+        </div>
+        
+        <div class="panel" title="Schedule" id="page2" data-footer="none">
+            <header>
+                <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
+                <h1>Scavenger Hunt / Schedule</h1>
+            </header>
+            <p><div><a id='menubadge' onclick='af.ui.toggleSideMenu()' class='icon left' style="float:left !important"></a>
+            <a id='menubadge' onclick='af.ui.toggleSideMenu()' class='icon right' style="float:right !important"></a></div>
+            <div title="March 6" id="march6" data-footer="none" align=center><h1>March 6, 2015</h1></div></p>
+        
+            <p><div  title="March 7" id="march7" data-footer="none"><h1>March 7, 2015</h1></div></p>
+    
+            <p><div  title="March 8" id="march8" data-footer="none"><h1>March 8, 2015</h1></div></p>
+        </div>
+        
+        <div class="panel" title="News" id="page3" data-footer="none">
+            <header>
+                <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
+                <h1>Scavenger Hunt / News</h1>
+            </header>
+            <p>This is view for third menu item</p>
+        </div>
+        
+        <div class="panel" title="Photos" id="page4" data-footer="none">
+            <header>
+                <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
+                <h1>Scavenger Hunt / Photos</h1>
+            </header>
+            <p>This is view for fourth menu item</p>
+        </div>
+        
+         <div class="panel" title="About" id="page5" data-footer="none">
+            <header>
+                <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
+                <h1>Scavenger Hunt / About</h1>
+            </header>
+            <p>This is view for fourth menu item</p>
+        </div>
+       
+    </div>
+</div>
+</body>
+</html>    
